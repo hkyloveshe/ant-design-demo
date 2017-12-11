@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Table,Popconfirm,Button}from 'antd';
+import { Table, Popconfirm, Button } from 'antd';
 
-const ProductList =({onDelete,profucts})=>{
-  const columns=[
-    {title:'Name',
+
+const ProductList =({onDelete,products})=>{
+  const columns=[{
+    title:'Name',
     dataIndex:'name',
     },{
     title:'Actions',
@@ -18,7 +19,10 @@ const ProductList =({onDelete,profucts})=>{
     }
   ];
         return(
-          <Table dataSource={profucts} columns={columns} />
+          <Table
+            dataSource={products}
+            columns={columns}
+          />
         );
 };
 
